@@ -1,0 +1,10 @@
+POST /register: Menerima data pengguna dari client dan menambahkannya ke array users.
+POST /login: Menerima username dan password dari client, memeriksa apakah ada pengguna yang cocok di array users, dan jika ada, mengembalikan token akses.
+POST /upload: Menerima file gambar dari client, menyimpannya di server, dan menambahkannya ke array images.
+DELETE /delete/:imageName: Menghapus file gambar dengan nama tertentu dari server dan array images.
+POST /notes: Menerima data catatan dari client dan menambahkannya ke array notes.
+GET /notes: Mengembalikan semua catatan dalam array notes.
+GET /notes/:id: Mengembalikan catatan dengan ID tertentu dari array notes.
+PUT /notes/:id: Memperbarui catatan dengan ID tertentu dalam array notes.
+DELETE /notes/:id: Menghapus catatan dengan ID tertentu dari array notes.
+Semua endpoint ini dilindungi oleh middleware authenticateToken, yang memeriksa apakah permintaan dari client menyertakan token akses yang valid.

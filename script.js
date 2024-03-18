@@ -6,7 +6,7 @@ let notes = [];
 
 app.post('/notes', (req, res) => {
   const note = req.body;
-  const id = Date.now().toString(); // Menghasilkan ID unik berdasarkan timestamp
+  const id = Date.now().toString(); 
   note.id = id;
   notes.push(note);
   res.status(201).json(note);
